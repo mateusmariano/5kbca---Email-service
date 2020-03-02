@@ -1,0 +1,116 @@
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27/02/2020, 10:37:17
+    Author     : 2016201818
+*/
+
+
+ /*--TITULO---*/
+ #titulo{
+	font-size: 85px;
+	border: red;
+	background-color: rgba(0,20,60,1);
+	font-family:consolas;
+ }
+ /*----CORPO-----*/
+ #fundo{
+	width: 100%;
+	height: 80%;
+	/*background-color: rgba(80,100,100);*/
+	background-image: linear-gradient(rgba(40,80,100,1),rgba(20,50,20,0.8));
+ }
+ 
+ #borda{
+	background-color : rgba(0,80,90);
+	width : 30%;
+	height: %;
+	left: 35%;
+	border: 2px solid;
+ }
+ #tema{
+	font-family:verdana;
+	color:white;
+	font-size: 25px;
+ }
+ /*------IMAGENS-----*/
+ #temaicon{
+	
+	left:47%;
+	top:30%;
+ }
+ #ad1{
+	position:absolute;
+	right: 177%;
+	top:-3px;
+ }
+ #ad2{
+	position:absolute;
+	left: 177%;
+	top:-3px;
+ }
+ 
+ /*-----RODAPE-----*/
+ #rodape{
+	
+	background-color: rgba(0,20,60,1);
+	color: white;
+	width: 100%;
+	height: 5%;
+	padding-top: 20px;
+	font-family: verdana;
+}
+	
+ /*--------LOGIN------*/
+ #login{
+	font-size: 20px;
+	padding-top:5%;
+	color: white;
+	font-family:verdana;
+ }
+ 
+ /*----¯\_(ツ)_/¯--*/
+ input[type = email]{
+	border-radius: 10px ;
+	border: 2px solid;
+	width: 70%;
+	padding: 12px 20px;
+	text-align: center;
+	font-size: 15px;
+	background-image : linear-gradient(rgba(0,100,0,0.3),darkgray);/* || rgba(0,100,0,0.2) || rgba(0,100,0,0.4)*/
+	cursor:move;
+ }
+ input[type = password]{
+	padding: 12px 20px;
+	border-radius: 10px;
+	border: 2px solid;
+	width: 70%;
+	text-align: center;
+	font-size: 15px;
+	background-image : linear-gradient(rgba(0,100,0,0.4),darkgray);
+	cursor:pointer;
+ }
+input[id = go] {
+  background-color: rgba(80,100,100);
+  width: 30%;
+  border: 2px solid;
+  border-radius: 15px;
+  padding: 2%;
+  font-size: 15px;
+  cursor: move; 
+  color: black;
+  font-family:verdana;
+}
+input[id = textbutton]{
+	background: none;
+	border:none;
+	cursor: pointer;
+	font-family: verdana;
+	color: lightblue;
+	left:35px;
+	text-decoration:underline;
+}

@@ -1,31 +1,43 @@
 <!DOCTYPE html>
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
-	<link rel ="stylesheet" type = "text/css" href = "estilobrabo.css">
+	<link rel ="stylesheet" type = "text/css" href = "estilo.css">
+	<link rel="icon" href="images/icon2.png"/>
 	<head>
-		<meta charset = "UTF - 8">
-		<title>5KBÇA</title>
+		<meta charset = "UTF-8">
+		<title>5KBÇA - Email</title>
 		<header id = "titulo"><center><img = src = "images/logo.png" width = "350" height = "120"></center></header>
-		
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		<div id = "fundo"></div>
-		<center>
-			<div id = "bordalogin">
-				<div id = "reduser"><img = src = "images/reduser.png" width = "100" height = "100"></div>
-				<div id = "ad1"><img = src = "images/anunciobrabo.png" width = "150" height = "450"></div>	
-				<div id = "ad2"><img = src = "images/anunciobrabo.png" width = "150" height = "450"></div>
-				<div id = "login">
-					<label for= "email"><b>Email ou telefone</b></label><br>
-					<input type = "email" placeholder = "email ou telefone" name ="emailcamp" ></input><br><br>
-					<label for = "email"><b>Senha<b></label><br>
-					<input type = "password" placeholder = "senha" name ="passcamp" ></input><br><br>
-					 <input type="button" value="Entrar">
+		<div id = "fundo">
+			<center>
+				<div id = "borda">
+					<label id = "tema"><b>Seja bem vindo(a),</b></label>
+												<!--LOGIN-->
+					<div id = "login">
+						<div id = "temaicon"><img = src = "images/reduser.png" width = "80" height = "80"></div><br>
+						<label for= "email"><b>Email ou telefone</b></label><br>
+						<input type = "email" placeholder = "email ou telefone" name ="emailcamp" ></input><br>
+						<input id = "textbutton" type = "button" value = "esqueceu o email?" onclick = "window.location.href = 'email.html'"><br>
+						<br>
+						<label for = "email"><b>Senha<b></label><br>
+						<input type = "password" placeholder = "senha" name ="passcamp" ></input><br>
+						<input id = "textbutton" type = "button" value = "esqueceu a senha?" onclick = "window.location.href = 'senha.html'"><br><br>
+						<input id = "go" name = "criar" type ="submit" value = "Criar Conta">&nbsp &nbsp &nbsp &nbsp &nbsp
+						<input id = "go" name = "entrar" type="submit" value="Entrar"><br><br>
+					</div>
 				</div>
-			</div>
-		</center>
-		<br>
+			</center>
+		</div>
+											<!--RODAPE-->
 		<div id = "rodape">
-			<center><b>@5KBÇA©. Todos os direitos reservados</b></center>
+			<center><b>5KBÇA©. Todos os direitos reservados.</b></center><br>
 		</div>
 	</body>
 </html>
