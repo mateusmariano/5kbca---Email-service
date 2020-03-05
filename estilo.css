@@ -72,6 +72,12 @@ and open the template in the editor.
 	color: white;
 	font-family:verdana;
  }
+
+ #rec{
+	font-size: 12.75px;
+	color: white;
+	font-family:verdana;
+ }
  
  /*----¯\_(ツ)_/¯--*/
  input[type = email]{
@@ -85,6 +91,16 @@ and open the template in the editor.
 	cursor:move;
  }
  input[type = password]{
+	padding: 12px 20px;
+	border-radius: 10px;
+	border: 2px solid;
+	width: 70%;
+	text-align: center;
+	font-size: 15px;
+	background-image : linear-gradient(rgba(0,100,0,0.4),darkgray);
+	cursor:pointer;
+ }
+  input[type = textfield]{
 	padding: 12px 20px;
 	border-radius: 10px;
 	border: 2px solid;
