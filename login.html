@@ -6,38 +6,80 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-	<link rel ="stylesheet" type = "text/css" href = "estilo.css">
-	<link rel="icon" href="images/icon2.png"/>
+	
+						<!------¯\_(ツ)_/¯--*/-->
+	<!--<link rel ="stylesheet" type = "text/css" href = "estilo.css">-->
+	
 	<head>
 		<meta charset = "UTF-8">
+		<link rel="icon" href="images/icon2.png"/>
+		<link href = "css/bootstrap.css" rel = "stylesheet" type = "text/css"> <!--style bootstrap-->
+		<script type = "text/javascript" scr = "js/jquery-3.4.1.min.js"></script> <!--script jquery-->
+		<script type = "text/javascript" scr = "js/bootstrap.min.js"></script>  <!--script bootstrap -min-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>5KBÇA - Email</title>
-		<header id = "titulo"><center><img = src = "images/logo.png" width = "350" height = "120"></center></header>
-		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+			.bg-1 { 
+			background-color: #001a4d;
+			color: #ffffff;
+			height: 150px;
+		  }
+		  
+		  .bg-2{
+			background-image: linear-gradient(rgba(40,80,100,1),rgba(20,50,20,0.8));
+		  }
+		  
+		  .bg-3{
+			background-color : rgba(0,80,90);
+			width : 30%;
+			height: %;
+			left: 35%;
+			border: 2px solid;
+		  }
+		  .footer { 
+			background-color: #001a4d;
+			color: #ffffff;
+			height: 80px;
+		  }
+		  
+		}
+		</style>
+		
 	</head>
 	<body>
-		<div id = "fundo">
+		<div class="container-fluid bg-1 text-center">  
+		<img = src = "images/logo.png"  class="img-fluid" width="350" height="350">
+		
+		</div>
+		<div class = "container-fluid bg-2 text-center">
 			<center>
-				<div id = "borda">
+				<div class = "container-fluid bg-3 text-center">
 					<label id = "tema"><b>Seja bem vindo(a),</b></label>
 												<!--LOGIN-->
-					<div id = "login">
+					
 						<div id = "temaicon"><img = src = "images/reduser.png" width = "80" height = "80"></div><br>
 						<label for= "email"><b>Email ou telefone</b></label><br>
-						<input type = "email" placeholder = "email ou telefone" name ="emailcamp" ></input><br>
-						<input id = "textbutton" type = "button" value = "esqueceu o email?" onclick = "window.location.href = 'email.html'"><br>
+						<!--<input type = "email" placeholder = "email ou telefone" name ="emailcamp" ></input>-->
+						<div class="input-group">
+						  <span class="input-group-addon"><img = src = "images/reduser.png" width = "40" height = "40"></span>
+						  <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+						</div>
+						<br>
+						<input id = "textbutton" class = "btn btn-link"type = "button" value = "esqueceu o email?" onclick = "window.location.href = 'email.html'"><br>
 						<br>
 						<label for = "email"><b>Senha<b></label><br>
 						<input type = "password" placeholder = "senha" name ="passcamp" ></input><br>
-						<input id = "textbutton" type = "button" value = "esqueceu a senha?" onclick = "window.location.href = 'senha.html'"><br><br>
-						<input id = "go" name = "criar" type ="submit" value = "Criar Conta">&nbsp &nbsp &nbsp &nbsp &nbsp
-						<input id = "go" name = "entrar" type="submit" value="Entrar"><br><br>
-					</div>
+						<input id = "textbutton" class = "btn btn-link"type = "button" value = "esqueceu a senha?" onclick = "window.location.href = 'senha.html'"><br><br>
+						<input id = "go" class="btn-success" name = "criar" type ="submit" value = "Criar Conta">&nbsp &nbsp &nbsp &nbsp &nbsp
+						<input id = "go" class = "btn-success"name = "entrar" type="submit" value="Entrar"><br><br>
+					
 				</div>
 			</center>
 		</div>
 											<!--RODAPE-->
-		<div id = "rodape">
-			<center><b>5KBÇA©. Todos os direitos reservados.</b></center><br>
+		<div class = "container-fluid footer text-center">
+			<center><br><p title="ESSE EMAIL EH BRABO DMS!!!"> 5KBÇA©. Todos os direitos reservados.</p></center><br>
 		</div>
 	</body>
 </html>
