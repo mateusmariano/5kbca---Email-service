@@ -1864,10 +1864,11 @@ pre code {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-image : linear-gradient(rgba(0,100,0,0.3),darkgray);
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
+  border: 2px solid;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -1964,6 +1965,7 @@ select.form-control:focus::-ms-value {
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
+
 }
 
 .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {
@@ -2502,7 +2504,7 @@ fieldset:disabled a.btn {
 
 .btn-success:hover {
   color: #fff;
-  background-color: #339966;
+  background-color: #93a38f;
   border-color: #1e7e34;
 }
 
@@ -9821,6 +9823,9 @@ button.bg-dark:focus {
 
 .text-uppercase {
   text-transform: uppercase !important;
+  color : #ffffff;
+  font-family: Verdana;
+  font-size: 25px;
 }
 
 .text-capitalize {

@@ -23,7 +23,7 @@ and open the template in the editor.
 			.bg-1 { 
 			background-color: #001a4d;
 			color: #ffffff;
-			height: 150px;
+			height: 130px;
 		  }
 		  
 		  .bg-2{
@@ -31,16 +31,20 @@ and open the template in the editor.
 		  }
 		  
 		  .bg-3{
-			background-color : rgba(0,80,90);
-			width : 30%;
-			height: %;
-			left: 35%;
-			border: 2px solid;
+			background-image: linear-gradient(rgba(20,50,60,0.5),rgba(20,50,20,0.4));
+			width: 30%;
+						
+			
 		  }
 		  .footer { 
 			background-color: #001a4d;
 			color: #ffffff;
 			height: 80px;
+		  }
+		  .text{
+			font-family:verdana;
+			color:white;
+			font-size: 20px;
 		  }
 		  
 		}
@@ -55,21 +59,26 @@ and open the template in the editor.
 		<div class = "container-fluid bg-2 text-center">
 			<center>
 				<div class = "container-fluid bg-3 text-center">
-					<label id = "tema"><b>Seja bem vindo(a),</b></label>
+					<label class = "text-uppercase"><b>Seja bem vindo(a),</b></label>
 												<!--LOGIN-->
-					
-						<div id = "temaicon"><img = src = "images/reduser.png" width = "80" height = "80"></div><br>
-						<label for= "email"><b>Email ou telefone</b></label><br>
-						<!--<input type = "email" placeholder = "email ou telefone" name ="emailcamp" ></input>-->
+						
+						<div id = "temaicon"><img = src = "images/reduser.png" width = "70" height = "70"></div><br>
+
+						<label for= "email" class = "text text"><b>Email ou Telefone</b></label><br>
+						
 						<div class="input-group">
-						  <span class="input-group-addon"><img = src = "images/reduser.png" width = "40" height = "40"></span>
-						  <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+						  <span class="input-group-addon"><img = src = "images/glyphicon.png" width = "40" height = "38"></span>
+						  <input type="email" class="form-control" name="email" placeholder="Email ou Telefone">
 						</div>
-						<br>
 						<input id = "textbutton" class = "btn btn-link"type = "button" value = "esqueceu o email?" onclick = "window.location.href = 'email.html'"><br>
 						<br>
-						<label for = "email"><b>Senha<b></label><br>
-						<input type = "password" placeholder = "senha" name ="passcamp" ></input><br>
+						
+						<label for = "email" class = "text text"><b>Senha<b></label><br>
+						<div class = "input-group">
+							<span class = "input-group-addon"><img src = "images/glyphicon2.png" width = "40" height = "38"></span>
+							<input type = "password" class = "form-control" placeholder = "Senha" name ="passcamp" ></input>
+						</div>
+						
 						<input id = "textbutton" class = "btn btn-link"type = "button" value = "esqueceu a senha?" onclick = "window.location.href = 'senha.html'"><br><br>
 						<input id = "go" class="btn-success" name = "criar" type ="submit" value = "Criar Conta">&nbsp &nbsp &nbsp &nbsp &nbsp
 						<input id = "go" class = "btn-success"name = "entrar" type="submit" value="Entrar"><br><br>
