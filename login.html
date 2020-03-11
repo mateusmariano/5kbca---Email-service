@@ -4,18 +4,25 @@
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
+
+
 -->
 <html>
 	
 						<!------¯\_(ツ)_/¯--*/-->
+	<!--Este código é protegido por leis internacionais de software e pela lei de Deus,
+		pq afinal de contas...
+								Só Deus sabe como isso está funcionando
+	>
 	<!--<link rel ="stylesheet" type = "text/css" href = "estilo.css">-->
 	
 	<head>
 		<meta charset = "UTF-8">
 		<link rel="icon" href="images/icon2.png"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link href = "css/bootstrap.css" rel = "stylesheet" type = "text/css"> <!--style bootstrap-->
 		<script type = "text/javascript" scr = "js/jquery-3.4.1.min.js"></script> <!--script jquery-->
-		<script type = "text/javascript" scr = "js/bootstrap.min.js"></script>  <!--script bootstrap -min-->
+		<script type = "text/javascript" scr = "js/bootstrap.min.js"></script>  <!--script bootstrap-min-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>5KBÇA - Email</title>
 		
@@ -56,33 +63,82 @@ and open the template in the editor.
 		<img = src = "images/logo.png"  class="img-fluid" width="350" height="350">
 		
 		</div>
+		
 		<div class = "container-fluid bg-2 text-center">
 			<center>
 				<div class = "container-fluid bg-3 text-center">
-				
-					<label class = "text-uppercase"><b>Seja bem vindo(a),</b></label>
-												<!--LOGIN-->
-						
+													<!--INDEX-->
+					<div id = "index" class="w3-container w3-center w3-animate-opacity">
+						<label class = "text-uppercase"><b>Seja bem vindo(a),</b></label>					
 						<div id = "temaicon"><img = src = "images/reduser.png" width = "70" height = "70"></div><br>
 
 						<label for= "email" class = "text text"><b>Email ou Telefone</b></label><br>
-						
+							
 						<div class="input-group">
 						  <span class="input-group-addon"><img = src = "images/glyphicon.png" width = "40" height = "38"></span>
 						  <input type="email" class="form-control" name="email" placeholder="Email ou Telefone">
 						</div>
-						<input id = "textbutton" class = "btn btn-link"type = "button" value = "esqueceu o email?" onclick = "window.location.href = 'email.html'"><br>
+						<input id = "textbutton" class = "btn btn-link"type = "button" value = "esqueceu o email?" onclick = "HideShow(1)"><br>
 						<br>
-						
+							
 						<label for = "email" class = "text text"><b>Senha<b></label><br>
 						<div class = "input-group">
 							<span class = "input-group-addon"><img src = "images/glyphicon2.png" width = "40" height = "38"></span>
 							<input type = "password" class = "form-control" placeholder = "Senha" name ="passcamp" ></input>
 						</div>
-						
-						<input id = "textbutton" class = "btn btn-link"type = "button" value = "esqueceu a senha?" onclick = "window.location.href = 'senha.html'"><br><br>
+							
+						<input id = "textbutton" class = "btn btn-link"type = "button" value = "esqueceu a senha?" onclick = "HideShow(2)"><br><br>
 						<input id = "go" class="btn-success" name = "criar" type ="submit" value = "Criar Conta">&nbsp &nbsp &nbsp &nbsp &nbsp
-						<input id = "go" class = "btn-success"name = "entrar" type="submit" value="Entrar"><br><br>
+						<input id = "go" class = "btn-success"name = "entrar" type="submit" value="Entrar" ><br><br>
+						<br>
+					</div>
+					
+							<!---------------||---------------->
+						
+							<!-----------EMAIL---------------->
+					<div style = "display:none" id = "recemail" class="w3-container w3-center w3-animate-top"> 
+						<br>
+							<label class = "text-uppercase"><b>Recuperação de Email</b></label>
+							<div id = "temaicon"><img = src = "images/emailicon.png" width = "100" height = "100"></div><br>
+							<label for= "email" class = "text text"><b>Número de Telefone</b></label><br>
+							
+							<div class="input-group">
+							  <span class="input-group-addon"><img = src = "images/glyphicon3.png" width = "40" height = "38"></span>
+							  <input type="textfield" class="form-control" name="fonecamp" placeholder="Telefone" title = "enviaremos um código via SMS para o seu número para continuar a recuperação">
+							</div>
+							<div class = "text-lowercase">
+								<b> Enviaremos um código via SMS para o seu número para continuar a recuperação. </b>
+							</div>
+							<br><br>
+							<input id = "textbutton" class = "btn-success"type = "button" value = "Enviar"><br>
+							
+							<br>
+							<input id = "textbutton" class = "btn btn-link" type = "button" value = "Fazer Login" onclick = "HideShow(3)"></input>
+						<br>
+					</div>
+							<!-----------------||------------->
+							
+							<!-------------SENHA------->
+					<div  style = "display:none" id = "recpass" class="w3-container w3-center w3-animate-top"">
+						<br>
+						<label class = "text-uppercase"><b>Recuperação de Senha</b></label>
+						<div id = "temaicon"><img = src = "images/passicon.png" width = "100" height = "100"></div><br>
+						<label for= "email" class = "text text"><b>Número de Telefone</b></label><br>
+						<div class="input-group">
+						  <span class="input-group-addon"><img = src = "images/glyphicon3.png" width = "40" height = "38"></span>
+						  <input type="textfield" class="form-control" name="fonecamp" placeholder="Telefone" title = "enviaremos um código via SMS para o seu número para continuar a recuperação">
+						</div>
+						<div class = "text-lowercase">
+							<b> Enviaremos um código via SMS para o seu número para continuar a recuperação. </b>
+						</div>
+						<br><br>
+						<input id = "textbutton" class = "btn-success"type = "button" value = "Enviar"><br>
+						
+						<br>
+						<input id = "textbutton" class = "btn btn-link" type = "button" value = "Fazer Login" onclick = "HideShow(3)"></input>
+						
+						<br>
+					</div>
 					
 				</div>
 			</center>
@@ -93,3 +149,33 @@ and open the template in the editor.
 		</div>
 	</body>
 </html>
+
+<script>
+	var index = document.getElementById("index");
+	var recemail = document.getElementById("recemail");
+	var recpass = document.getElementById("recpass");
+	
+	function HideShow(i) {
+		if( i === 3){
+			recemail.style.display = "none";
+			index.style.display = "block";
+			recpass.style.display = "none";
+		}else{
+			console.log(i);
+			
+			if (i == 1) {
+				recemail.style.display = "block";
+				index.style.display = "none";
+				recpass.style.display = "none";
+			}
+			if (i == 2) {
+				recemail.style.display = "none";
+				index.style.display = "none";
+				recpass.style.display = "block";
+			}
+			
+		}	
+	 
+	}
+//
+</script>
