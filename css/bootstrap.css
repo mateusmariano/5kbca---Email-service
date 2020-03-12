@@ -479,7 +479,7 @@ mark,
 .img-fluid {
   max-width: 100%;
   height: auto;
-  
+
 }
 
 .img-thumbnail {
@@ -1856,7 +1856,7 @@ pre code {
 }
 
 .form-control {
-  display: block;
+  display: inline;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
@@ -2499,25 +2499,25 @@ fieldset:disabled a.btn {
   width: 35%;
   font-size: 15px;
   padding: 1%;
-  
+
 }
 
 .btn-success:hover {
-  color: #4d4d4d;	
+  color: #4d4d4d;
   background-color: #93a38f;
   border-color: #0099ff;
 }
 
 .btn-success:focus, .btn-success.focus {
   box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
-   	
+
 }
 
 .btn-success.disabled, .btn-success:disabled {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
-  
+
 }
 
 .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
