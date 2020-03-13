@@ -68,11 +68,11 @@ pq afinal de contas...
 			  100% {top:500px;}
 			}
 			@keyframes startlogo{/* controle de animação do head do logo há um bug aqui.
-														Se retirar a linha do 1% e alterar a linha 0% para top em 200px, como na animacao do rodapé,
-														ao dar recarregar a pagina duas vezes o logo vai embora pra cima. A gambiarra foi
-														colocar o 0% em 0px e acrescentar o 1%, que assim o logo comeca em cima e em um frame retorna
-														para o comeco da animação. ao dar f5 varias vezes é perceptivel a gambiarra.
-														*/
+					Se retirar a linha do 1% e alterar a linha 0% para top em 200px, como na animacao do rodapé,
+					ao dar recarregar a pagina duas vezes o logo vai embora pra cima. A gambiarra foi
+					coloocar o 0% em 0px e acrescentar o 1%, que assim o logo comeca em cima e em um frame retorna
+					para o comeco da animação. ao dar f5 varias vezes é perceptivel a gambiarra.
+					*/
 				0%{top:0px;}
 				1%{top:200px;}
 				100%{top:0px;}
@@ -225,12 +225,12 @@ pq afinal de contas...
 
 	/*A funcao abaixo faz o controle das transicoes, em cada chamada dela eh passada um parametro(int) de controle "i";
 	que serve para o condicionamento dos ifs de modo q:{ i == 3 a tela de index é mostrada
-																											 i == 4 a tela de criar conta é mostrada
-																											 senao{
-																											 			i == 1  a tela de recuperacao de email é mostrada
-																														i == 2  a tela de recuperacao de senha é mostrada
-																										 			}
-																											}
+							     i == 4 a tela de criar conta é mostrada
+							     senao{
+								i == 1  a tela de recuperacao de email é mostrada
+								i == 2  a tela de recuperacao de senha é mostrada
+								}
+							}
 	*/
 	function HideShow(i) {
 
