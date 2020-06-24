@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!------¯\_(ツ)_/¯--*/-->
-<!--Este código é protegido por leis internacionais de software e pela lei de Deus,
-pq afinal de contas...
-		Só Deus sabe como isso está funcionando
-<html>
-	<!--CSS ESTILO ANTIGO<link rel ="stylesheet" type = "text/css" href = "estilo.css">-->
 	<head>
 		<meta charset = "UTF-8">
 		<link rel="icon" href="images/icon2.png"/>
@@ -19,9 +8,6 @@ pq afinal de contas...
 		<script type = "text/javascript" scr = "js/bootstrap.min.js"></script>  <!--script bootstrap-min-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>5KBÇA - Email</title>
-		<!--Todas as telas foram agrupadas em um html só por causa das transições-->
-		<!--abaixo a tag style que serve como um mini css para estilizar as divs da pagina; a maioria dos comandos
-		 foram copiados do primeiro css"estilo.css" -->
 		<style>
 			.bg-0{ /* background de fundo*/
 				background-color: #001a4d;
@@ -44,7 +30,6 @@ pq afinal de contas...
 			background-image: linear-gradient(rgba(20,50,60,0.5),rgba(20,50,20,0.4));
 			width: 30%;
 
-
 		  }
 		  .footer { /* background do rodapé*/
 			background-color: #001a4d;
@@ -59,17 +44,11 @@ pq afinal de contas...
 			color:white;
 			font-size: 20px;
 		  }
-			/*as duas animacoes abaixo ocorrem de forma concomitante */
 			@keyframes startfoot { /* controle de animação do rodapé*/
 			  0%   {top:200px;}
 			  100% {top:500px;}
 			}
-			@keyframes startlogo{/* controle de animação do head do logo há um bug aqui.
-					Se retirar a linha do 1% e alterar a linha 0% para top em 200px, como na animacao do rodapé,
-					ao dar recarregar a pagina duas vezes o logo vai embora pra cima. A gambiarra foi
-					coloocar o 0% em 0px e acrescentar o 1%, que assim o logo comeca em cima e em um frame retorna
-					para o comeco da animação. ao dar f5 varias vezes é perceptivel a gambiarra.
-					*/
+			@keyframes startlogo{
 				0%{top:0px;}
 				1%{top:200px;}
 				100%{top:0px;}
@@ -84,10 +63,10 @@ pq afinal de contas...
 		<div class="container-fluid bg-1 text-center">
 			<img = src = "images/logo.png"  class="img-fluid" width="350" height="350"> <!-- imagem do logo-->
 		</div>
-
-		<div class = "container-fluid bg-2 text-center">
+					<!--INI-->
+		<div id = "ini" class = "container-fluid bg-2 text-center">
 			<center>
-				<div class = "container-fluid bg-3 text-center">
+				<div id = "borda" class = "container-fluid bg-3 text-center" >
 													<!--INDEX--> <!-- Tela de index; a primeira a aprecer -->
 					<div  id = "index" class="w3-container w3-center w3-animate-opacity">
 						<label class = "text-uppercase"><b>Seja bem vindo(a),</b></label>
@@ -109,7 +88,7 @@ pq afinal de contas...
 
 							<input id = "textbutton" class = "btn btn-link"type = "button" value = "esqueceu a senha?" onclick = "HideShow(2)"><br><br>
 							<input id = "go" class="btn-success" name = "criar" type ="button" value = "Criar Conta" onclick="HideShow(4)">&nbsp &nbsp &nbsp &nbsp &nbsp<!--usado para dar um espaço entre os botoes -->
-							<input id = "go" class = "btn-success"name = "entrar" type="submit" value="Entrar" ><br><br>
+							<input id = "go" class = "btn-success"name = "entrar" type="submit" value="Entrar" onclick="GO()"  ><br><br>
 						</form>
 						<br>
 					</div>
@@ -200,6 +179,10 @@ pq afinal de contas...
 				</div>
 			</center>
 		</div>
+					<!--EMAIL-->
+		<div id = "email" style = "display:none"class = "container-fluid bg-2 text-center">
+				<input id = "textbutton" class = "btn btn-link"type = "button" value = "esqueceu o email?" onclick = "HideShow(1)"><br>
+		</div>
 											<!--RODAPE-->
 		<div class = "container-fluid footer text-center">
 			<center><p title="ESSE EMAIL EH BRABO DMS!!!"> 5KBÇA©. Todos os direitos reservados.</p></center>
@@ -208,27 +191,16 @@ pq afinal de contas...
 </html>
 
 <script>
-/* Aqui comeca o js com algumas funcoes que estão em uso pela página
-	Abaixo são algumas variáveis que representam as divs da página.
-	Elas reconhecem as divs pelo atributo "id" definido na criação das divs
-*/
 	var index = document.getElementById("index");
 	var bg = document.getElementById("firstbg");
+	var ini = document.getElementById("ini");
+	var email = document.getElementById("email");
 	var criarindex = document.getElementById("criarconta");
 	var recemail = document.getElementById("recemail");
 	var recpass = document.getElementById("recpass");
 	var ccpassfield = document.getElementById("ccpass");
 	var ccpassfieldcfm = document.getElementById("ccpasscfm");
 
-	/*A funcao abaixo faz o controle das transicoes, em cada chamada dela eh passada um parametro(int) de controle "i";
-	que serve para o condicionamento dos ifs de modo q:{ i == 3 a tela de index é mostrada
-							     i == 4 a tela de criar conta é mostrada
-							     senao{
-								i == 1  a tela de recuperacao de email é mostrada
-								i == 2  a tela de recuperacao de senha é mostrada
-								}
-							}
-	*/
 	function HideShow(i) {
 
 			if(i == 3){
@@ -259,9 +231,7 @@ pq afinal de contas...
 			}
 
 		}
-
 	}
-	/*funcao feita para mostrar a senha quando o olho é apertado*/
 	function PassShow(){
 		if(ccpassfield.type == "password" || ccpassfieldcfm.type == "password"){
 			ccpassfield.type = "text";
@@ -272,14 +242,13 @@ pq afinal de contas...
 
 		}
 	}
-	/*primeira funcao chamada na página; ela contem a funcao setTimeout do js que é uma funcao de TImingEvent,
-	ou seja, dps de um tempo faz alguma coisa. NEsse caso dps de 4 segundos (4000) ela muda o style no quesito
-	display da div index para block, e muda a div bg para none, assim mostrando a index, e escondendo a bg q eh o fundo azul do comeco;
-	 */
 	function Start(){
 		index.style.display = "none";
 		setTimeout(function(){index.style.display = "block"},4000);
 		setTimeout(function(){bg.style.display = "none"},4000);
 	}
-	/*demais alterações de estilo foram feitas no arquivo css/bootstrap.css*/
+	function GO(){
+			ini.style.display = "none";
+			email.style.display = "block";
+	}
 </script>
